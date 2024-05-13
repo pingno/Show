@@ -1,0 +1,35 @@
+/* Home.css */
+
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .center-column {
+    text-align: center;
+  }
+  
+  .profile-image {
+    width: 150px; /* Adjust the size as needed */
+    height: 150px;
+    border-radius: 50%; /* Make it circular */
+  }
+  
+  .description {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
+  .tech-stacks {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .tech-stack-icon {
+    width: 50px; /* Adjust the size as needed */
+    height: 50px;
+    margin: 0 10px; /* Adjust the spacing between icons */
+  }
