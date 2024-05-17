@@ -33,3 +33,48 @@
     height: 50px;
     margin: 0 10px; /* Adjust the spacing between icons */
   }
+
+
+
+  
+/* Home.css */
+
+.resume-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif; /* Use Roboto font */
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 50px; /* Make it rounder */
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.resume-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.resume-button:hover::after {
+  width: 0;
+  height: 0;
+}
+
+.resume-button:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}

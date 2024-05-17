@@ -23,6 +23,11 @@ const Home = () => {
           <img src={jsIcon} alt="JavaScript" className="tech-stack-icon" /> */}
           {/* Add more tech stack images here */}
         </div>
+
+        {/* Add the resume button */}
+        <a href="/path/to/your/resume.pdf" download className="resume-button">Download Resume</a>
+
+
       </div>
     </div>
   );
