@@ -12,7 +12,7 @@ const Home = () => {
         {/* <img src={profileImage} alt="Profile" className="profile-image" /> */}
 
         {/* Text description */}
-        <p className="description">Hi there, My name is Peang Ngo! (sounds like ping)</p>
+        <p className="description">Hi there, My name is Peang Ngo!</p>
         <p>I'm a software engineer, fullstack developer, and a jack-of-all trades!</p>
         <p>My background is pretty diverse</p>
 

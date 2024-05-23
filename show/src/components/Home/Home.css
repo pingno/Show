@@ -1,59 +1,60 @@
-/* Home.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+/* Gradient background for the entire home component */
 .home-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .center-column {
-    text-align: center;
-  }
-  
-  .profile-image {
-    width: 150px; /* Adjust the size as needed */
-    height: 150px;
-    border-radius: 50%; /* Make it circular */
-  }
-  
-  .description {
-    margin-top: 20px;
-    font-size: 18px;
-  }
-  
-  .tech-stacks {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .tech-stack-icon {
-    width: 50px; /* Adjust the size as needed */
-    height: 50px;
-    margin: 0 10px; /* Adjust the spacing between icons */
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #e0f7fa 0%, #ffffff 30%); /* Subtle gradient accent at the top */
+}
 
+.center-column {
+  text-align: center;
+  color: #333; /* Dark text color for better readability */
+}
 
+.profile-image {
+  width: 150px; /* Adjust the size as needed */
+  height: 150px;
+  border-radius: 50%; /* Make it circular */
+}
 
-  
-/* Home.css */
+.description {
+  margin-top: 20px;
+  font-size: 18px;
+}
 
+.tech-stacks {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.tech-stack-icon {
+  width: 50px; /* Adjust the size as needed */
+  height: 50px;
+  margin: 0 10px; /* Adjust the spacing between icons */
+}
+
+/* Styling for the resume button */
 .resume-button {
   display: inline-block;
   padding: 12px 24px;
-  font-size: 14px;
-  font-weight: 600;
-  font-family: 'Roboto', sans-serif; /* Use Roboto font */
+  font-size: 16px; /* Slightly larger for readability */
+  font-weight: 400; /* Regular weight for a modern look */
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
   text-transform: uppercase;
   color: #fff;
-  background-color: #007bff;
-  border: none;
+  background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+  border: 2px solid #fff; /* White border */
   border-radius: 50px; /* Make it rounder */
   cursor: pointer;
-  transition: background-color 0.3s, box-shadow 0.3s;
+  transition: border-color 0.3s, box-shadow 0.3s, text-decoration 0.3s;
   position: relative;
   overflow: hidden;
+  text-decoration: none; /* Remove underline */
+  z-index: 1; /* Ensure the button is above the pseudo-elements */
 }
 
 .resume-button::after {
@@ -74,7 +75,9 @@
   width: 0;
   height: 0;
 }
-/* 
+
 .resume-button:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-} */
+  border-color: #0ff; /* Neon blue border on hover */
+  box-shadow: 0 0 20px #0ff, 0 0 40px #0ff, 0 0 60px #0ff; /* Neon blue glow effect on hover */
+  text-decoration: underline; /* Add underline on hover */
+}
