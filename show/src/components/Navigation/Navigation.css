@@ -1,23 +1,30 @@
 /* Navigation.css */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600&display=swap');
+
+body {
+  background-color: #0d0d0d; /* Dark background to match Tron theme */
+  color: #fff;
+  font-family: 'Exo 2', sans-serif;
+}
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background-color: #111;
   padding: 20px 40px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  border-bottom: 2px solid #00ffff; /* Neon cyan border */
 }
 
 .navbar-brand {
   font-size: 24px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Exo 2', sans-serif;
 }
 
 .logo {
-  color: #fff;
+  color: #00ffff; /* Neon cyan color */
   text-decoration: none;
   font-weight: 600;
 }
@@ -43,13 +50,15 @@
   color: #fff;
   text-decoration: none;
   padding: 10px 20px;
+  border: 2px solid transparent;
   border-radius: 8px;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, border 0.3s ease;
+  font-family: 'Exo 2', sans-serif;
 }
 
 .nav-links li a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #fff;
-  transform: scale(1.05);
+  background-color: rgba(0, 255, 255, 0.1); /* Light cyan background on hover */
+  color: #00ffff;
+  transform: scale(1.1);
+  border: 2px solid #00ffff; /* Neon cyan border on hover */
 }
