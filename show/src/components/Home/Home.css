@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&display=swap');
 
 /* Gradient background for the entire home component */
 .home-container {
@@ -12,6 +12,7 @@
 .center-column {
   text-align: center;
   color: #333; /* Dark text color for better readability */
+  font-family: 'Exo 2', sans-serif; /* Use Exo 2 font */
 }
 
 .profile-image {
@@ -22,7 +23,37 @@
 
 .description {
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 32px; /* Increased font size for better readability */
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  color: #00ffff; /* Neon cyan color */
+  white-space: nowrap;
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Keyframes for typing animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Keyframes for caret blink effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #00ffff; }
+}
+
+.typing-effect {
+  display: inline-block;
+  animation: fadeIn 3s ease-in-out;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 .tech-stacks {
@@ -37,6 +68,7 @@
   margin: 0 10px; /* Adjust the spacing between icons */
 }
 
+/* Styling for the resume button */
 .resume-button {
   display: inline-block;
   padding: 12px 24px;
