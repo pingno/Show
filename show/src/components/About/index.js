@@ -19,15 +19,17 @@ const About = () => {
         personal growth.
       </p>
 
-      <div>My Journey</div>
 
-      <p>
-        High School - School of Business and Management at Yvonne E. Ewell
-        Townview Center
-      </p>
-      <p>College - Associates degree in Liberal Arts</p>
+      <div>High School - School of Business and Management at Yvonne A. Ewell Townview Center</div>
+      <div>College - Associates degree in Liberal Arts</div>
+      <div>App Academy - Full Stack Web Development </div>
 
-      <p>App Academy - Full Stack Web Development </p>
+
+      <div>8+ years in customer service/hospitality positions</div>
+      <div>8+ years of involvement with the Dallas Dance Community</div>
+
+      
+
     </div>
   );
 };
