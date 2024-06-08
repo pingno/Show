@@ -28,7 +28,12 @@ const About = () => {
       <div>8+ years in customer service/hospitality positions</div>
       <div>8+ years of involvement with the Dallas Dance Community</div>
 
-      
+      <div>From Dallas, Texas born in </div>
+
+      <div>One of my favorite things to do was dance.  I started breakdancing with a group of friends in highschool which led me to opportunities
+        with my local dance community.  There I spent 8 years involved with a non-profit dance organization where I held roles
+        ranging from student, student director, youth coordinator, adult team director, social media coordinator, 
+      </div>
 
     </div>
   );
