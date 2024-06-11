@@ -35,6 +35,11 @@ const About = () => {
         ranging from student, student director, youth coordinator, adult team director, social media coordinator, 
       </div>
 
+
+
+      <div>
+        
+      </div>
     </div>
   );
 };
