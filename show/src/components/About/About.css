@@ -1,152 +1,81 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap');
+/* About.css */
 
 .about-container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 40px 20px;
-  background-color: #1a1c20; /* Dark background similar to Valorant */
-  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3); /* Red glow shadow */
-  border-radius: 8px;
-  text-align: center;
-  color: #ffffff; /* White text for high contrast */
-  border: 2px solid #ff4655; /* Valorant red border */
-  position: relative; /* To allow for absolute positioning of decorative elements */
-  overflow: hidden; /* Hide any overflow */
-}
-
-.about-container::before, .about-container::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(45deg, transparent 75%, rgba(255, 70, 85, 0.2) 75%);
-  mix-blend-mode: overlay;
-  pointer-events: none;
-  z-index: 1; /* Ensure it's above the container content but below other pseudo-elements */
+  padding: 2rem;
+  background: rgba(25, 25, 25, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
 }
 
 .about-title {
-  font-size: 36px; /* Larger font size */
-  font-weight: 600;
-  font-family: 'Rajdhani', sans-serif; /* Use Rajdhani font for a techy look */
-  margin-bottom: 20px;
-  color: #ff4655; /* Valorant red */
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  position: relative;
-  z-index: 2; /* Ensure it's above the decorative gradient */
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-.about-title:hover {
-  color: #fff;
-  text-shadow: 0 0 10px #ff4655, 0 0 20px #ff4655, 0 0 30px #ff4655; /* Red glow on hover */
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #0ff;
+  text-align: center;
 }
 
 .about-description {
-  font-size: 20px;
-  font-weight: 400;
-  font-family: 'Rajdhani', sans-serif; /* Consistent font */
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
   line-height: 1.6;
-  color: #e1e1e1; /* Light grey for secondary text */
-  margin-bottom: 20px; /* Space below description */
-  position: relative;
-  z-index: 2; /* Ensure it's above the decorative gradient */
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+  color: #ccc;
 }
 
-.about-description:hover {
+.about-values {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  color: #999;
+}
+
+.about-section {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #0ff;
+}
+
+.education-list, .experience-list {
+  list-style: none;
+  padding: 0;
   color: #fff;
-  text-shadow: 0 0 10px #ff4655, 0 0 20px #ff4655, 0 0 30px #ff4655; /* Red glow on hover */
 }
 
-.about-highlight {
-  color: #ff4655; /* Highlight in Valorant red */
-  font-weight: 600;
-  position: relative;
-  transition: background-color 0.3s ease, color 0.3s ease;
+.education-list li, .experience-list li {
+  margin-bottom: 0.5rem;
 }
 
-.about-highlight:hover {
-  background-color: #ff4655; /* Red background on hover */
-  color: #1a1c20; /* Dark text on hover */
-  padding: 3px 6px;
-  border-radius: 4px;
+.about-hobbies {
+  font-size: 1rem;
+  color: #aaa;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+h3, p, li {
+  transition: color 0.3s;
 }
 
-.about-container {
-  animation: fadeInUp 1s ease-out;
+h3:hover, p:hover, li:hover {
+  color: #0ff;
 }
 
-/* Add a "glitch" effect for a more dynamic, gaming feel */
-.glitch {
-  position: relative;
-  color: #ff4655; /* Initial red color */
-  font-family: 'Rajdhani', sans-serif;
-  animation: glitch 1s infinite alternate-reverse;
+.about-container div:hover {
+  transform: translateY(-5px);
 }
 
-.glitch::before, .glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #1a1c20;
-  overflow: hidden;
+.about-container div {
+  transition: transform 0.3s;
 }
 
-.glitch::before {
-  left: 2px;
-  text-shadow: -2px 0 #00ffff;
-  clip: rect(24px, 550px, 90px, 0);
-  animation: glitch-before 1s infinite alternate-reverse;
-}
-
-.glitch::after {
-  left: -2px;
-  text-shadow: -2px 0 #ff4655;
-  clip: rect(85px, 550px, 140px, 0);
-  animation: glitch-after 1.5s infinite alternate-reverse;
-}
-
-@keyframes glitch {
-  0% { transform: translate(0); }
-  20% { transform: translate(-2px, 2px); }
-  40% { transform: translate(-2px, -2px); }
-  60% { transform: translate(2px, 2px); }
-  80% { transform: translate(2px, -2px); }
-  100% { transform: translate(0); }
-}
-
-@keyframes glitch-before {
-  0% { clip: rect(30px, 9999px, 35px, 0); transform: skew(0.3deg); }
-  20% { clip: rect(10px, 9999px, 85px, 0); transform: skew(0.1deg); }
-  40% { clip: rect(20px, 9999px, 50px, 0); transform: skew(0.2deg); }
-  60% { clip: rect(40px, 9999px, 70px, 0); transform: skew(0.4deg); }
-  80% { clip: rect(50px, 9999px, 60px, 0); transform: skew(0.5deg); }
-  100% { clip: rect(30px, 9999px, 35px, 0); transform: skew(0.3deg); }
-}
-
-@keyframes glitch-after {
-  0% { clip: rect(60px, 9999px, 65px, 0); transform: skew(0.3deg); }
-  20% { clip: rect(80px, 9999px, 75px, 0); transform: skew(0.1deg); }
-  40% { clip: rect(70px, 9999px, 85px, 0); transform: skew(0.2deg); }
-  60% { clip: rect(90px, 9999px, 100px, 0); transform: skew(0.4deg); }
-  80% { clip: rect(100px, 9999px, 110px, 0); transform: skew(0.5deg); }
-  100% { clip: rect(60px, 9999px, 65px, 0); transform: skew(0.3deg); }
+body {
+  background-color: #0f0f0f;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
 }
