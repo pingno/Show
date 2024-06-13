@@ -1,63 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap');
 
 .about-container {
   max-width: 800px;
-  margin: 0 auto; /* Center the container */
+  margin: 0 auto;
   padding: 40px 20px;
-  background-color: #f8f8f8; /* Light background */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  border-radius: 15px; /* Slightly larger border radius */
+  background-color: #1a1c20; /* Dark background similar to Valorant */
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3); /* Red glow shadow */
+  border-radius: 8px;
   text-align: center;
-  color: #333; /* Dark text color for better readability */
-  transition: transform 0.3s ease; /* Smooth transform effect */
+  color: #ffffff; /* White text for high contrast */
+  border: 2px solid #ff4655; /* Valorant red border */
+  position: relative; /* To allow for absolute positioning of decorative elements */
+  overflow: hidden; /* Hide any overflow */
 }
 
-.about-container:hover {
-  transform: translateY(-10px); /* Slight lift effect on hover */
+.about-container::before, .about-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(45deg, transparent 75%, rgba(255, 70, 85, 0.2) 75%);
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 1; /* Ensure it's above the container content but below other pseudo-elements */
 }
 
 .about-title {
-  font-size: 34px; /* Slightly larger for emphasis */
+  font-size: 36px; /* Larger font size */
   font-weight: 600;
-  font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
-  margin-bottom: 15px;
-  color: #444; /* Slightly darker shade */
-  text-transform: capitalize; /* Capitalize first letters */
-  letter-spacing: 0.5px; /* Slight letter spacing */
-  transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition */
+  font-family: 'Rajdhani', sans-serif; /* Use Rajdhani font for a techy look */
+  margin-bottom: 20px;
+  color: #ff4655; /* Valorant red */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 2; /* Ensure it's above the decorative gradient */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .about-title:hover {
-  color: #0077cc; /* Change to a professional blue on hover */
-  text-shadow: 0 0 8px rgba(0, 119, 204, 0.3); /* Subtle blue glow */
+  color: #fff;
+  text-shadow: 0 0 10px #ff4655, 0 0 20px #ff4655, 0 0 30px #ff4655; /* Red glow on hover */
 }
 
 .about-description {
-  font-size: 18px; /* Standard size for readability */
+  font-size: 20px;
   font-weight: 400;
-  font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
-  line-height: 1.8;
-  color: #555; /* Dark grey text color */
+  font-family: 'Rajdhani', sans-serif; /* Consistent font */
+  line-height: 1.6;
+  color: #e1e1e1; /* Light grey for secondary text */
   margin-bottom: 20px; /* Space below description */
-  transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition */
+  position: relative;
+  z-index: 2; /* Ensure it's above the decorative gradient */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .about-description:hover {
-  color: #444; /* Slightly darker grey on hover */
-  text-shadow: 0 0 6px rgba(0, 119, 204, 0.2); /* Subtle blue glow */
+  color: #fff;
+  text-shadow: 0 0 10px #ff4655, 0 0 20px #ff4655, 0 0 30px #ff4655; /* Red glow on hover */
 }
 
 .about-highlight {
-  color: #0077cc; /* Highlight in professional blue */
-  font-weight: 600; /* Emphasize with bold */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  color: #ff4655; /* Highlight in Valorant red */
+  font-weight: 600;
+  position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .about-highlight:hover {
-  background-color: #e0f4ff; /* Light blue background on hover */
-  color: #005bb5; /* Darker blue text on hover */
-  padding: 3px 6px; /* Add some padding for effect */
-  border-radius: 5px; /* Slightly round the edges */
+  background-color: #ff4655; /* Red background on hover */
+  color: #1a1c20; /* Dark text on hover */
+  padding: 3px 6px;
+  border-radius: 4px;
 }
 
 @keyframes fadeInUp {
@@ -73,4 +89,64 @@
 
 .about-container {
   animation: fadeInUp 1s ease-out;
+}
+
+/* Add a "glitch" effect for a more dynamic, gaming feel */
+.glitch {
+  position: relative;
+  color: #ff4655; /* Initial red color */
+  font-family: 'Rajdhani', sans-serif;
+  animation: glitch 1s infinite alternate-reverse;
+}
+
+.glitch::before, .glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1a1c20;
+  overflow: hidden;
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 #00ffff;
+  clip: rect(24px, 550px, 90px, 0);
+  animation: glitch-before 1s infinite alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: -2px 0 #ff4655;
+  clip: rect(85px, 550px, 140px, 0);
+  animation: glitch-after 1.5s infinite alternate-reverse;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes glitch-before {
+  0% { clip: rect(30px, 9999px, 35px, 0); transform: skew(0.3deg); }
+  20% { clip: rect(10px, 9999px, 85px, 0); transform: skew(0.1deg); }
+  40% { clip: rect(20px, 9999px, 50px, 0); transform: skew(0.2deg); }
+  60% { clip: rect(40px, 9999px, 70px, 0); transform: skew(0.4deg); }
+  80% { clip: rect(50px, 9999px, 60px, 0); transform: skew(0.5deg); }
+  100% { clip: rect(30px, 9999px, 35px, 0); transform: skew(0.3deg); }
+}
+
+@keyframes glitch-after {
+  0% { clip: rect(60px, 9999px, 65px, 0); transform: skew(0.3deg); }
+  20% { clip: rect(80px, 9999px, 75px, 0); transform: skew(0.1deg); }
+  40% { clip: rect(70px, 9999px, 85px, 0); transform: skew(0.2deg); }
+  60% { clip: rect(90px, 9999px, 100px, 0); transform: skew(0.4deg); }
+  80% { clip: rect(100px, 9999px, 110px, 0); transform: skew(0.5deg); }
+  100% { clip: rect(60px, 9999px, 65px, 0); transform: skew(0.3deg); }
 }
