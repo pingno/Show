@@ -1,17 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&display=swap');
 
 .about-container {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto; /* Center the container */
   padding: 40px 20px;
-  background-color: #1a1c20; /* Dark background similar to Valorant */
-  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3); /* Red glow shadow */
+  background-color: #1a1c20; /* Dark background */
+  box-shadow: 0 4px 15px rgba(0, 255, 155, 0.3); /* Neon green teal shadow */
   border-radius: 8px;
   text-align: center;
   color: #ffffff; /* White text for high contrast */
-  border: 2px solid #ff4655; /* Valorant red border */
-  position: relative; /* To allow for absolute positioning of decorative elements */
+  border: 2px solid #00ffaa; /* Green teal neon border */
+  position: relative;
   overflow: hidden; /* Hide any overflow */
+  font-family: 'Exo 2', sans-serif; /* Futuristic font */
 }
 
 .about-container::before, .about-container::after {
@@ -21,7 +22,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(45deg, transparent 75%, rgba(255, 70, 85, 0.2) 75%);
+  background: linear-gradient(45deg, transparent 75%, rgba(0, 255, 155, 0.2) 75%);
   mix-blend-mode: overlay;
   pointer-events: none;
   z-index: 1; /* Ensure it's above the container content but below other pseudo-elements */
@@ -30,25 +31,31 @@
 .about-title {
   font-size: 36px; /* Larger font size */
   font-weight: 600;
-  font-family: 'Rajdhani', sans-serif; /* Use Rajdhani font for a techy look */
+  font-family: 'Exo 2', sans-serif; /* Use Exo 2 font for a techy look */
   margin-bottom: 20px;
-  color: #ff4655; /* Valorant red */
+  color: #00ffaa; /* Green teal neon color */
   text-transform: uppercase;
   letter-spacing: 1px;
   position: relative;
   z-index: 2; /* Ensure it's above the decorative gradient */
   transition: color 0.3s ease, text-shadow 0.3s ease;
+  display: inline-block;
+  border: 2px solid #00ffaa; /* Add border around title */
+  padding: 10px 20px;
+  border-radius: 4px; /* Slight rounding */
+  box-shadow: 0 0 15px #00ffaa; /* Green teal glow */
+  background-color: #222; /* Slightly darker background */
 }
 
 .about-title:hover {
   color: #fff;
-  text-shadow: 0 0 10px #ff4655, 0 0 20px #ff4655, 0 0 30px #ff4655; /* Red glow on hover */
+  text-shadow: 0 0 10px #00ffaa, 0 0 20px #00ffaa, 0 0 30px #00ffaa; /* Green teal glow on hover */
 }
 
 .about-description {
   font-size: 20px;
   font-weight: 400;
-  font-family: 'Rajdhani', sans-serif; /* Consistent font */
+  font-family: 'Exo 2', sans-serif; /* Consistent font */
   line-height: 1.6;
   color: #e1e1e1; /* Light grey for secondary text */
   margin-bottom: 20px; /* Space below description */
@@ -59,18 +66,18 @@
 
 .about-description:hover {
   color: #fff;
-  text-shadow: 0 0 10px #ff4655, 0 0 20px #ff4655, 0 0 30px #ff4655; /* Red glow on hover */
+  text-shadow: 0 0 10px #00ffaa, 0 0 20px #00ffaa, 0 0 30px #00ffaa; /* Green teal glow on hover */
 }
 
 .about-highlight {
-  color: #ff4655; /* Highlight in Valorant red */
+  color: #00ffaa; /* Highlight in green teal neon */
   font-weight: 600;
   position: relative;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .about-highlight:hover {
-  background-color: #ff4655; /* Red background on hover */
+  background-color: #00ffaa; /* Green teal background on hover */
   color: #1a1c20; /* Dark text on hover */
   padding: 3px 6px;
   border-radius: 4px;
@@ -91,11 +98,20 @@
   animation: fadeInUp 1s ease-out;
 }
 
-/* Add a "glitch" effect for a more dynamic, gaming feel */
+/* Neon divider lines similar to those in the Valorant shop */
+.about-divider {
+  height: 2px;
+  background: linear-gradient(to right, #00ffaa, #00ffff);
+  border-radius: 1px;
+  margin: 20px 0;
+  position: relative;
+  z-index: 2; /* Ensure it's above the decorative gradient */
+}
+
 .glitch {
   position: relative;
-  color: #ff4655; /* Initial red color */
-  font-family: 'Rajdhani', sans-serif;
+  color: #00ffaa; /* Initial green teal color */
+  font-family: 'Exo 2', sans-serif;
   animation: glitch 1s infinite alternate-reverse;
 }
 
@@ -119,7 +135,7 @@
 
 .glitch::after {
   left: -2px;
-  text-shadow: -2px 0 #ff4655;
+  text-shadow: -2px 0 #00ffaa;
   clip: rect(85px, 550px, 140px, 0);
   animation: glitch-after 1.5s infinite alternate-reverse;
 }
@@ -149,4 +165,28 @@
   60% { clip: rect(90px, 9999px, 100px, 0); transform: skew(0.4deg); }
   80% { clip: rect(100px, 9999px, 110px, 0); transform: skew(0.5deg); }
   100% { clip: rect(60px, 9999px, 65px, 0); transform: skew(0.3deg); }
+}
+
+/* Valorant-inspired buttons */
+.valorant-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Exo 2', sans-serif;
+  color: #1a1c20; /* Dark text color */
+  background-color: #00ffaa; /* Green teal */
+  border: 2px solid #00ffff; /* Cyan border */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.valorant-button:hover {
+  background-color: #00ffff; /* Cyan background on hover */
+  color: #1a1c20; /* Dark text color on hover */
+  border-color: #00ffaa; /* Green teal border on hover */
+  box-shadow: 0 0 10px #00ffaa, 0 0 20px #00ffff; /* Glow */
 }
