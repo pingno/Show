@@ -47,6 +47,15 @@ const About = () => {
           In my spare time, I love exploring new technologies, participating in hackathons, and contributing to open-source projects. I'm also an avid gamer and enjoy playing Valorant and League of Legends.
         </p>
       </div>
+
+      <div>
+        <h3>Timeline</h3>
+        Dallas, Texas
+        30 years old
+        Chinese American
+
+        Breakdancer
+      </div>
     </div>
   );
 };
