@@ -1,0 +1,118 @@
+/* Contact.css */
+
+body {
+    background-color: #0f0f0f;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .contact-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(25, 25, 25, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .contact-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #0ff;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #0ff;
+    border-bottom: 1px solid #0ff;
+  }
+  
+  .contact-form-section, .social-media-section, .contact-info-section {
+    padding: 1rem;
+    border: 1px solid #0ff;
+    border-radius: 8px;
+    background: rgba(0, 255, 255, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    color: #0ff;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #0ff;
+    border-radius: 8px;
+    background: rgba(25, 25, 25, 0.7);
+    color: #fff;
+    transition: border 0.3s;
+  }
+  
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: #ff0;
+  }
+  
+  .submit-button {
+    background: #0ff;
+    border: none;
+    color: #0f0f0f;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .submit-button:hover {
+    background: #ff0;
+    transform: scale(1.05);
+  }
+  
+  .social-media-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-link {
+    color: #0ff;
+    text-decoration: none;
+    padding: 0.5rem;
+    border: 1px solid #0ff;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .social-link:hover {
+    background: #0ff;
+    color: #0f0f0f;
+  }
+  
+  .contact-info-section p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.4;
+  }
+  
+  .contact-container div:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s;
+  }
+  

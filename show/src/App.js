@@ -6,6 +6,7 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import About from "./components/About";
+import Contact from "./components/Contact";
 // import Projects from "./components/Projects";
 // import Skills from "./components/Skills";
 // import Experience from "./components/Experience";
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/skills" element={<Skills />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/contact" element={<Contact />} /> */}
+          <Route path="/contact" element={<Contact />} />
         </Routes>
 
         <Footer />
