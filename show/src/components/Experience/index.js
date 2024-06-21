@@ -1,43 +1,81 @@
-import React from 'react';
-import './Experience.css';
+import React, { useState } from 'react';
+import './Experience.css'; // Assuming you're using a CSS file for styling
 
 const experiences = [
-  {
-    year: '2018',
-    title: 'Software Engineer at XYZ Corp',
-    description: 'Developed web applications using React and Node.js. Collaborated on large-scale projects, improving efficiency by 30%.'
-  },
-  {
-    year: '2020',
-    title: 'Senior Developer at ABC Inc.',
-    description: 'Led a team of 5 developers in creating a new e-commerce platform. Implemented CI/CD pipelines and increased deployment speed by 50%.'
-  },
-  {
-    year: '2022',
-    title: 'Technical Lead at Tech Solutions',
-    description: 'Managed technical strategy and development for enterprise software solutions. Oversaw the migration to cloud services, reducing costs by 20%.'
-  }
-  // Add more experiences here
+  { type: 'school', startAge: 18, endAge: 22, description: 'Bachelor\'s Degree in Computer Science' },
+  { type: 'job', startAge: 23, endAge: 27, description: 'Software Engineer at XYZ Corp' },
+  { type: 'volunteer', startAge: 25, endAge: 26, description: 'Volunteer at ABC Nonprofit' },
+  // Add more experiences as needed
 ];
 
 const Experience = () => {
-  return (
-    <div className="timeline-container">
-      <h1 className="timeline-title">My Experience</h1>
-      <div className="timeline">
-        {experiences.map((experience, index) => (
-          <div key={index} className="timeline-item">
-            <div className="timeline-point" data-year={experience.year}></div>
-            <div className="timeline-content">
-              <h2>{experience.year}</h2>
-              <h3>{experience.title}</h3>
-              <p>{experience.description}</p>
+    const currentAge = 30; // You can dynamically calculate this if needed
+    const ageRange = currentAge - 18;
+    const [hoveredExp, setHoveredExp] = useState(null);
+  
+    const getFlagColor = (type) => {
+      switch(type) {
+        case 'school':
+          return 'red';
+        case 'job':
+          return 'blue';
+        case 'volunteer':
+          return 'green';
+        default:
+          return 'gray';
+      }
+    };
+  
+    return (
+      <div className="timeline-container">
+        <div className="timeline-bar">
+          {Array.from({ length: ageRange + 1 }, (_, i) => 18 + i).map((age, index) => (
+            <div key={index} className="timeline-marker" style={{ left: `${(index / ageRange) * 100}%` }}>
+              <span className="timeline-age">{age}</span>
             </div>
+          ))}
+          {experiences.map((exp, index) => {
+            const startPercent = ((exp.startAge - 18) / ageRange) * 100;
+            const endPercent = ((exp.endAge - 18) / ageRange) * 100;
+  
+            return (
+              <div
+                key={index}
+                className="experience-flag"
+                style={{
+                  left: `${startPercent}%`,
+                  width: `${endPercent - startPercent}%`,
+                  backgroundColor: getFlagColor(exp.type)
+                }}
+                onMouseEnter={() => setHoveredExp(index)}
+                onMouseLeave={() => setHoveredExp(null)}
+              >
+                {hoveredExp === index && (
+                  <div className="experience-description">
+                    {exp.description}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+        <div className="legend">
+          <div className="legend-item">
+            <div className="legend-color red"></div>
+            <span>School</span>
           </div>
-        ))}
+          <div className="legend-item">
+            <div className="legend-color blue"></div>
+            <span>Job</span>
+          </div>
+          <div className="legend-item">
+            <div className="legend-color green"></div>
+            <span>Volunteer</span>
+          </div>
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  };
+  
 
 export default Experience;
