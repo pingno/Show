@@ -1,81 +1,44 @@
-import React, { useState } from 'react';
-import './Experience.css'; // Assuming you're using a CSS file for styling
-
-const experiences = [
-  { type: 'school', startAge: 18, endAge: 22, description: 'Bachelor\'s Degree in Computer Science' },
-  { type: 'job', startAge: 23, endAge: 27, description: 'Software Engineer at XYZ Corp' },
-  { type: 'volunteer', startAge: 25, endAge: 26, description: 'Volunteer at ABC Nonprofit' },
-  // Add more experiences as needed
-];
+import React from "react";
+import "./Experience.css";
 
 const Experience = () => {
-    const currentAge = 30; // You can dynamically calculate this if needed
-    const ageRange = currentAge - 18;
-    const [hoveredExp, setHoveredExp] = useState(null);
-  
-    const getFlagColor = (type) => {
-      switch(type) {
-        case 'school':
-          return 'red';
-        case 'job':
-          return 'blue';
-        case 'volunteer':
-          return 'green';
-        default:
-          return 'gray';
-      }
-    };
-  
-    return (
-      <div className="timeline-container">
-        <div className="timeline-bar">
-          {Array.from({ length: ageRange + 1 }, (_, i) => 18 + i).map((age, index) => (
-            <div key={index} className="timeline-marker" style={{ left: `${(index / ageRange) * 100}%` }}>
-              <span className="timeline-age">{age}</span>
-            </div>
-          ))}
-          {experiences.map((exp, index) => {
-            const startPercent = ((exp.startAge - 18) / ageRange) * 100;
-            const endPercent = ((exp.endAge - 18) / ageRange) * 100;
-  
-            return (
-              <div
-                key={index}
-                className="experience-flag"
-                style={{
-                  left: `${startPercent}%`,
-                  width: `${endPercent - startPercent}%`,
-                  backgroundColor: getFlagColor(exp.type)
-                }}
-                onMouseEnter={() => setHoveredExp(index)}
-                onMouseLeave={() => setHoveredExp(null)}
-              >
-                {hoveredExp === index && (
-                  <div className="experience-description">
-                    {exp.description}
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-        <div className="legend">
-          <div className="legend-item">
-            <div className="legend-color red"></div>
-            <span>School</span>
+  const experiences = [
+    {
+      id: 1,
+      startDate: "2006",
+      endDate: "2014",
+      title: "Customer Service Representative",
+      company: "Various Hospitality Establishments",
+      description: "Handled customer inquiries and complaints with professionalism."
+    },
+    {
+      id: 2,
+      startDate: "2006",
+      endDate: "2014",
+      title: "Dancer",
+      company: "Dallas Dance Community",
+      description: "Engaged in various roles including student director and social media coordinator."
+    },
+    // Add more experiences as needed
+  ];
+
+  return (
+    <div className="experience-container">
+      <h3 className="section-title">Experience Timeline</h3>
+      {experiences.map((experience) => (
+        <div key={experience.id} className="experience-item">
+          <div className="experience-content">
+            <h4 className="experience-title">{experience.title}</h4>
+            <p className="experience-company">{experience.company}</p>
+            <p className="experience-description">{experience.description}</p>
           </div>
-          <div className="legend-item">
-            <div className="legend-color blue"></div>
-            <span>Job</span>
-          </div>
-          <div className="legend-item">
-            <div className="legend-color green"></div>
-            <span>Volunteer</span>
+          <div className="experience-dates">
+            <p className="experience-duration">{`${experience.startDate} - ${experience.endDate}`}</p>
           </div>
         </div>
-      </div>
-    );
-  };
-  
+      ))}
+    </div>
+  );
+};
 
 export default Experience;
