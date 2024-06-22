@@ -45,8 +45,13 @@
     text-align: right;
   }
   
-  .experience-duration {
+  /* .experience-duration {
     font-size: 1.1rem;
     color: #aaa;
-  }
+  } */
   
+
+  .experience-duration {
+    font-size: 2.2.rem;
+    color: #aaa;
+  }
