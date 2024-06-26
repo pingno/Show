@@ -8,7 +8,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
-// import Projects from "./components/Projects";
+import Projects from "./components/Projects";
 // import Skills from "./components/Skills";
 // import Contact from "./components/Contact";
 
@@ -26,10 +26,11 @@ const App = () => {
 
           {/* Add other routes here */}
           {/* <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
+          
           <Route path="/skills" element={<Skills />} />
            />
           <Route path="/contact" element={<Contact />} /> */}
+          <Route path="/projects" element={<Projects />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
