@@ -13,8 +13,8 @@ const Home = () => {
 
         {/* Text description */}
         <p className="description">Hi there, My name is Peang Ngo!</p>
-        <p>I'm a software engineer, fullstack developer, and a jack-of-all trades!</p>
-        <p>My background is pretty diverse</p>
+        <div>"I'm going to become king of the pirates!"</div>
+        <div>Want to learn more about me?</div>
 
         {/* Tech stacks */}
         <div className="tech-stacks">
