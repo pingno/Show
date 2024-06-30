@@ -23,7 +23,7 @@ const Home = () => {
         <div>These are the tech-stacks I've learned during my coding bootcamp</div>
         <div> I'm currently learning about TypeScript, Angular, Vue!</div>
 
-        <div>Open to any ideas you want to collaborate on!</div>
+        <div>Let's connect!</div>
 
         {/* Tech stacks */}
         <div className="tech-stacks">
