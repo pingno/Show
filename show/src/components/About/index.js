@@ -4,6 +4,7 @@ import "./About.css";
 const About = () => {
   return (
     <div className="about-container">
+      
       <h2 className="about-title">About Me</h2>
       <p className="about-description">
         Hi, I'm Peang, a passionate full stack developer with experience in
@@ -55,6 +56,12 @@ const About = () => {
         Chinese American
 
         Breakdancer
+        Food lover
+        Doggy Dad
+        Hiphop enthusiast
+        Novice gamer
+        Comedian
+        
       </div>
     </div>
   );
