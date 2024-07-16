@@ -15,15 +15,13 @@ const Home = () => {
         <p className="description">Hi there, My name is Peang Ngo!</p>
         <div>"I'm going to become king of the pirates!"</div>
 
-      <p></p>
-        <div>Thanks for stopping by my page.</div>
-        <div>Here's a glimpse into my journey</div>
+        <p>Thanks for stopping by my page.</p>
+        <p>Here's a glimpse into my journey:</p>
         
-      <p></p>
-        <div>These are the tech-stacks I've learned during my coding bootcamp</div>
-        <div> I'm currently learning about TypeScript, Angular, Vue!</div>
+        <p>These are the tech-stacks I've learned during my coding bootcamp:</p>
+        <p>I'm currently learning about TypeScript, Angular, and Vue!</p>
 
-        <div>Let's connect!</div>
+        <p>Let's connect!</p>
 
         {/* Tech stacks */}
         <div className="tech-stacks">
@@ -35,8 +33,6 @@ const Home = () => {
 
         {/* Add the resume button */}
         <a href="/path/to/your/resume.pdf" download className="resume-button">Download Resume</a>
-
-
       </div>
     </div>
   );
