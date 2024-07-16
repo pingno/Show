@@ -14,12 +14,12 @@ const Home = () => {
         {/* Text description */}
         <p className="description">Hi there, My name is Peang Ngo!</p>
         <div>"I'm going to become king of the pirates!"</div>
+
+      <p></p>
         <div>Thanks for stopping by my page.</div>
-
-
         <div>Here's a glimpse into my journey</div>
         
-
+      <p></p>
         <div>These are the tech-stacks I've learned during my coding bootcamp</div>
         <div> I'm currently learning about TypeScript, Angular, Vue!</div>
 
