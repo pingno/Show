@@ -88,7 +88,7 @@
   z-index: 1; /* Ensure the button is above the pseudo-elements */
 }
 
-.resume-button::after {
+/* .resume-button::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -105,7 +105,7 @@
 .resume-button:hover::after {
   width: 0;
   height: 0;
-}
+} */
 
 .resume-button:hover {
   border-color: #00ffff; /* Neon cyan border on hover */
