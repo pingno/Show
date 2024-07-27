@@ -11,3 +11,21 @@ const posts = [
   },
   // Add more posts as needed
 ];
+
+const Blog = () => {
+  const [selectedPost, setSelectedPost] = useState(null);
+
+  const handleSelectPost = (post) => {
+    setSelectedPost(post);
+  };
+
+  const handleBack = () => {
+    setSelectedPost(null);
+  };
+
+  return (
+
+  );
+};
+
+export default Blog;
