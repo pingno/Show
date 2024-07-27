@@ -1,0 +1,21 @@
+.blog {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .blog-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .blog-list-item {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin-bottom: 16px;
+    cursor: pointer;
+  }
+  
+  .blog-list-item h2 {
+    margin: 0;
+  }
+  
