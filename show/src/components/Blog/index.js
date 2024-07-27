@@ -24,7 +24,26 @@ const Blog = () => {
   };
 
   return (
-
+    <div className="blog">
+      {selectedPost ? (
+        <div className="blog-post">
+          <button onClick={handleBack}>Back</button>
+          <h1>{selectedPost.title}</h1>
+          <p>{selectedPost.date}</p>
+          <div>{selectedPost.content}</div>
+        </div>
+      ) : (
+        <div className="blog-list">
+          {posts.map(post => (
+            <div key={post.id} className="blog-list-item" onClick={() => handleSelectPost(post)}>
+              <h2>{post.title}</h2>
+              <p>{post.date}</p>
+              <p>{post.excerpt}</p>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
   );
 };
 
