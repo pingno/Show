@@ -19,3 +19,22 @@
     margin: 0;
   }
   
+  .blog-list-item p {
+    margin: 4px 0;
+  }
+  
+  .blog-post {
+    padding: 16px;
+  }
+  
+  .blog-post button {
+    margin-bottom: 16px;
+  }
+  
+  .blog-post h1 {
+    margin: 0 0 16px;
+  }
+  
+  .blog-post p {
+    margin: 8px 0;
+  }
