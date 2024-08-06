@@ -7,31 +7,17 @@ const posts = [
     title: 'My First Blog Post',
     date: '2024-07-27',
     excerpt: 'This is a short summary of my first blog post...',
-    content: 'This is the full content of my first blog post...'
+    content: 'This is the full content of my first blog post...',
+    image: 'path/to/image1.jpg' // Add the image path
   },
   {
     id: 2,
     title: 'Something out of nothing',
     date: '2024-08-05',
     excerpt: 'Once again, now where do I start?',
-    content: 'I\'ve always had a bubble of interests that revolved around business, tech, design, creative work, and marketing'
+    content: 'I\'ve always had a bubble of interests that revolved around business, tech, design, creative work, and marketing',
+    image: 'path/to/image2.jpg' // Add the image path
   },
-  {
-    id: 3,
-    title: 'My First Blog Post',
-    date: '2024-07-27',
-    excerpt: 'This is a short summary of my first blog post...',
-    content: 'This is the full content of my first blog post...'
-  },
-  {
-    id: 4,
-    title: 'Something out of nothing',
-    date: '2024-08-05',
-    excerpt: 'Once again, now where do I start?',
-    content: 'I\'ve always had a bubble of interests that revolved around business, tech, design, creative work, and marketing'
-  },
-
-
   // Add more posts as needed
 ];
 
@@ -53,6 +39,7 @@ const Blog = () => {
           <button onClick={handleBack}>Back</button>
           <h1>{selectedPost.title}</h1>
           <p>{selectedPost.date}</p>
+          <img src={selectedPost.image} alt={selectedPost.title} /> {/* Display the image */}
           <div>{selectedPost.content}</div>
         </div>
       ) : (
