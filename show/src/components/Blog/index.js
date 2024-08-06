@@ -9,6 +9,14 @@ const posts = [
     excerpt: 'This is a short summary of my first blog post...',
     content: 'This is the full content of my first blog post...'
   },
+  {
+    id: 2,
+    title: 'Something out of nothing',
+    date: '2024-08-05',
+    excerpt: 'Once again, now where do I start?',
+    content: 'I\'ve always had a bubble of interests that revolved around business, tech, design, creative work, and marketing'
+  },
+
   // Add more posts as needed
 ];
 
