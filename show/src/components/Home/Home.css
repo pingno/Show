@@ -1,42 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&display=swap');
 
-/* Modernized Gradient background for the entire home component */
+/* Futuristic Gradient background with cooler tones */
 .home-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(180deg, #d7effe 0%, #ffffff 100%); /* Cleaner gradient with cooler tones */
+  background: linear-gradient(135deg, #101820 0%, #0d2b3a 50%, #1e3c59 100%);
 }
 
+/* Glassmorphism effect for the main column */
 .center-column {
   text-align: center;
-  color: #333; /* Dark text color for better readability */
-  font-family: 'Exo 2', sans-serif; /* Use Exo 2 font */
+  color: #e0e0e0; /* Light text color for futuristic contrast */
+  font-family: 'Exo 2', sans-serif;
+  background: rgba(255, 255, 255, 0.1); /* Frosted glass effect */
+  backdrop-filter: blur(10px); /* Glassmorphism blurring */
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
 .profile-image {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%; 
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Softer, larger shadow for a modern effect */
-  transition: transform 0.3s ease; /* Smooth transformation on hover */
+  border: 3px solid rgba(255, 255, 255, 0.3); /* Frosted glass border */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5), 0 0 30px rgba(0, 255, 255, 0.2); /* Neon glow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .profile-image:hover {
-  transform: scale(1.05); /* Slightly increase size on hover for emphasis */
+  transform: scale(1.1); /* More pronounced hover effect */
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.7), 0 0 50px rgba(0, 255, 255, 0.4);
 }
 
 .description {
   margin-top: 20px;
-  font-size: 30px; /* Adjusted for modern readability */
+  font-size: 34px; /* Slightly larger for futuristic vibe */
   font-weight: 600;
   position: relative;
   display: inline-block;
   overflow: hidden;
-  color: #00d8ff; /* Softer neon cyan */
+  color: #00e6ff; /* Electric cyan */
   white-space: nowrap;
-  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
 @keyframes typing {
@@ -46,12 +54,12 @@
 
 @keyframes blink-caret {
   from, to { border-color: transparent; }
-  50% { border-color: #00d8ff; }
+  50% { border-color: #00e6ff; }
 }
 
 .typing-effect {
   display: inline-block;
-  animation: fadeIn 2s ease-in-out; /* Smooth and slightly faster fade-in */
+  animation: fadeIn 3s ease-in-out; /* Smooth fade-in */
 }
 
 @keyframes fadeIn {
@@ -60,34 +68,35 @@
 }
 
 .tech-stacks {
-  margin-top: 20px;
+  margin-top: 30px;
   display: flex;
   justify-content: center;
-  gap: 15px; /* Use gap for cleaner spacing */
+  gap: 20px; /* Evenly spaced futuristic layout */
 }
 
 .tech-stack-icon {
-  width: 50px; 
-  height: 50px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 60px;
+  height: 60px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.4)); /* Soft glow for icons */
 }
 
 .tech-stack-icon:hover {
-  transform: translateY(-5px) scale(1.08); /* Modern hover with lift and scale */
-  box-shadow: 0 4px 20px rgba(0, 216, 255, 0.3); /* Softer, modern glow effect */
+  transform: scale(1.2) translateY(-5px); /* Lift and enlarge on hover */
+  filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.7)); /* Bright glow on hover */
 }
 
 .resume-button {
   display: inline-block;
-  padding: 12px 30px; /* Adjusted padding for a more balanced look */
-  font-size: 16px; 
-  font-weight: 400; 
+  padding: 15px 35px; /* Adjusted for a more futuristic feel */
+  font-size: 18px; 
+  font-weight: 400;
   font-family: 'Exo 2', sans-serif;
   text-transform: uppercase;
-  color: #00d8ff; /* Softer neon cyan */
-  background-color: #111; 
-  border: 2px solid #00d8ff; 
-  border-radius: 30px; /* More rounded for a modern, friendly appearance */
+  color: #00e6ff; /* Neon cyan */
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent for modern look */
+  border: 2px solid #00e6ff;
+  border-radius: 30px; 
   cursor: pointer;
   transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s ease;
   position: relative;
@@ -103,7 +112,7 @@
   left: 50%;
   width: 300%;
   height: 300%;
-  background-color: rgba(0, 216, 255, 0.1); /* Softer glow animation */
+  background-color: rgba(0, 230, 255, 0.1);
   border-radius: 50%;
   transition: all 0.6s ease;
   transform: translate(-50%, -50%);
@@ -116,8 +125,8 @@
 }
 
 .resume-button:hover {
-  border-color: #00d8ff;
-  box-shadow: 0 0 15px #00d8ff, 0 0 30px #00d8ff; /* Softer, yet prominent glow */
-  background-color: #222; 
-  transform: translateY(-3px); /* Subtle lift on hover */
+  border-color: #00e6ff;
+  box-shadow: 0 0 20px #00e6ff, 0 0 40px #00e6ff; /* Glow effect for futuristic button */
+  background-color: rgba(20, 20, 20, 0.8); /* Darker background on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
 }
