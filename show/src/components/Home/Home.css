@@ -6,12 +6,12 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(to bottom, #e0f7fa 0%, #ffffff 30%); /* Subtle gradient accent at the top */
+  background: linear-gradient(to bottom, #e0f7fa 0%, #f0fcff 50%, #ffffff 100%); /* Smoother gradient */
 }
 
 .center-column {
   text-align: center;
-  color: #333; /* Dark text color for better readability */
+  color: #333; /* Dark text color for readability */
   font-family: 'Exo 2', sans-serif; /* Use Exo 2 font */
 }
 
@@ -21,25 +21,24 @@
   border-radius: 50%; 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
+
 .description {
   margin-top: 20px;
-  font-size: 32px; /* Increased font size for better readability */
+  font-size: 32px; 
   font-weight: 600;
   position: relative;
   display: inline-block;
   overflow: hidden;
-  color: #00ffff; /* Neon cyan color */
+  color: #00ffff; /* Neon cyan */
   white-space: nowrap;
-  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite; /* Slightly longer typing effect */
 }
 
-/* Keyframes for typing animation */
 @keyframes typing {
   from { width: 0; }
   to { width: 100%; }
 }
 
-/* Keyframes for caret blink effect */
 @keyframes blink-caret {
   from, to { border-color: transparent; }
   50% { border-color: #00ffff; }
@@ -47,10 +46,9 @@
 
 .typing-effect {
   display: inline-block;
-  animation: fadeIn 3s ease-in-out;
+  animation: fadeIn 2.5s ease-in-out; /* Slightly faster fade-in */
 }
 
-/* Keyframes for fade-in animation */
 @keyframes fadeIn {
   0% { opacity: 0; transform: translateY(-20px); }
   100% { opacity: 1; transform: translateY(0); }
@@ -63,29 +61,34 @@
 }
 
 .tech-stack-icon {
-  width: 50px; /* Adjust the size as needed */
+  width: 50px; 
   height: 50px;
-  margin: 0 10px; /* Adjust the spacing between icons */
+  margin: 0 10px;
+  transition: transform 0.3s, box-shadow 0.3s; /* Add transition for hover effect */
 }
 
-/* Styling for the resume button */
+.tech-stack-icon:hover {
+  transform: scale(1.1); /* Slightly increase size on hover */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Glow effect on hover */
+}
+
 .resume-button {
   display: inline-block;
   padding: 12px 24px;
-  font-size: 16px; /* Slightly larger for readability */
-  font-weight: 400; /* Regular weight for a modern look */
-  font-family: 'Exo 2', sans-serif; /* Use Exo 2 font */
+  font-size: 16px; 
+  font-weight: 400; 
+  font-family: 'Exo 2', sans-serif; 
   text-transform: uppercase;
-  color: #00ffff; /* Neon cyan color */
-  background-color: #111; /* Dark background to match the navigation */
-  border: 2px solid #00ffff; /* Neon cyan border */
-  border-radius: 8px; /* Make it rounder */
+  color: #00ffff; 
+  background-color: #111; 
+  border: 2px solid #00ffff; 
+  border-radius: 8px; 
   cursor: pointer;
   transition: border-color 0.3s, box-shadow 0.3s, text-decoration 0.3s, background-color 0.3s;
   position: relative;
   overflow: hidden;
-  text-decoration: none; /* Remove underline */
-  z-index: 1; /* Ensure the button is above the pseudo-elements */
+  text-decoration: none;
+  z-index: 1; 
 }
 
 .resume-button::after {
@@ -108,8 +111,8 @@
 }
 
 .resume-button:hover {
-  border-color: #00ffff; /* Neon cyan border on hover */
-  box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff; /* Neon cyan glow effect on hover */
-  text-decoration: underline; /* Add underline on hover */
-  background-color: #222; /* Slightly lighter dark background on hover */
+  border-color: #00ffff; 
+  box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff; 
+  text-decoration: underline;
+  background-color: #222; 
 }
