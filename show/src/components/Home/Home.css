@@ -16,11 +16,11 @@
 }
 
 .profile-image {
-  width: 150px; /* Adjust the size as needed */
+  width: 150px; 
   height: 150px;
-  border-radius: 50%; /* Make it circular */
+  border-radius: 50%; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
-
 .description {
   margin-top: 20px;
   font-size: 32px; /* Increased font size for better readability */
