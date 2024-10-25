@@ -9,3 +9,18 @@
   background: linear-gradient(135deg, #101820 0%, #0d2b3a 50%, #1e3c59 100%);
   overflow: hidden;
 }
+
+
+/* Glassmorphism effect for the main column */
+.center-column {
+  text-align: center;
+  color: #e0e0e0;
+  font-family: 'Exo 2', sans-serif;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.3);
+  max-width: 80%;
+}
+
